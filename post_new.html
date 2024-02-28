@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/article.css">
+  <title>Article :: Create comment</title>
+</head>
+<body>
+	<div class="container">
+		<form action="#"
+				th:action="@{'/posts/new'}"
+				th:object="${post}"
+				method="POST">
+			<input type="hidden" th:field="*{account}" />
+			<input type="hidden" th:field="*{createdAt}" />
+			<h2>Write a new comment</h2>
+			<div>
+				<label for="new-post-title">Title</h2>
+				<input id="new-post-title" type="text" th:field="*{title}" placeholder="Title"/>
+			</div>
+			<div>
+				<label for="new-post-body">Body</h2>
+				<textarea id="new-post-body" th:field="*{body}"></textarea>
+			</div>
+			<hr/>
+			<button type="submit">Comment</button>
+		</form>
+		<hr />
+        <ul>
+            <a th:href="@{'/'}">Back to Article</a>
+        </ul>
+	</div>
+</body>
+</html>

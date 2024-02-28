@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/article.css">
+  <title>Blog :: Login</title>
+</head>
+<body>
+	<div class="container">
+		<h3>Provide credentials for site access</h3>
+		<hr/>
+		<form action="#"
+                th:action="@{/login}"
+                method="POST">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input id="email" type="text" name="email" placeholder="Email"/>
+                <p> </p>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input id="password" type="password" name="password" placeholder="Password"/>
+                <p> </p>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        <hr />
+        <ul>
+            <a th:href="@{'/'}">Back to Article</a>
+        </ul>
+	</div>
+</body>
+</html>

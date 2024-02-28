@@ -1,0 +1,141 @@
+/* #### Colors #### */
+/*
+:root { --color-text: #F5F5F5 !important; --color-background: #1C140A !important; --color-border: #2D2219 !important; --color-item-selected: #653F1F !important; --joplin-search-marker-background-color: #867061 !important;}
+a { color: #F38F50 !important; }
+b, strong { color: #EE8E56 !important; }
+h1, h2 { border-bottom: 1px solid #6F635A !important;}
+body { color: #F5F5F5 !important; background-color: #2B1E12 !important; }
+body#joplin-container-body { color: #F5F5F5 !important; background-color: #2B1E12 !important; }
+blockquote {  border-left: 4px solid #EE8E56 !important; color: #EE8E56 !important; }
+.jop-tinymce table td, .jop-tinymce table th, table td, th { color: #F5F5F5 !important; }
+table { background-color: #653F1F !important;
+} th { background-color: #33281C !important;
+} table tr { border-top: 1px solid #6F635A !important;
+} table tr:nth-child(2n), thead { background-color: #653F1F !important;
+} table tr th { font-weight: bold; border: 1px solid #6F635A !important;
+} table tr td { border: 1px solid #6F635A !important; }
+hr { background-color: #6F635A !important; }
+.CodeMirror-lines { background-color: #241A12 !important; color: #F5F5F5 !important;}
+.CodeMirror-sizer, div.resizableLayoutItem.rli-sideBar, div.resizableLayoutItem.rli-noteList, div.resizableLayoutItem.rli-root { background-color: #1C140A !important;
+} div.CodeMirror span.cm-header-1, div.CodeMirror span.cm-header-2, div.CodeMirror span.cm-header-3, div.CodeMirror span.cm-header-4, div.CodeMirror span.cm-header-5, div.CodeMirror span.cm-header-6 { color: #F5F5F5 !important;
+} div.CodeMirror span.cm-quote { color: #F5F5F5 !important;
+} div.CodeMirror span.cm-comment {color: white !important; background-color: black !important; }
+.cm-s-default .cm-bracket { color: #867061 !important; }
+.cm-s-default .cm-tag, .cm-s-default .cm-number { color: #EE8E56 !important; }
+.better-markdown-viewer-highlight-line { background-color: #653F1F !important; }
+div.editor-toolbar { background-color: #2C2015 !important; color: #F5F5F5 !important; }
+input.title-input { background-color: #33281C !important; color: #6F635A !important; }
+.cm-s-default .cm-variable, .cm-s-default .cm-punctuation, .cm-s-default .cm-property, .cm-s-default .cm-operator { color: black; }
+div.CodeMirror span.cm-keyword { color: purple !important; }
+div.CodeMirror span.cm-link-text { color: #F38F50 !important; }
+div.CodeMirror span.cm-variable-2, div.CodeMirror span.cm-variable-3 { color: white !important; }
+.CodeMirror-scroll { background-color: #1C140A; }
+*/
+
+.comment-box,
+.post-comment,
+.post {
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 2px #0002;
+}
+
+.comment-section {
+    width: 650px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.post-comment,
+.post {
+    width: 100px;
+    margin-bottom: 12px;
+}
+
+.post-comment .post .user {
+    display: flex;
+    padding: 8px;
+    overflow: hidden;
+}
+
+.post-comment .post .user {
+    height: 38px;
+    width: 38px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.comment-section .name {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.post-comment .comment-post {
+    padding: 0 0 15px 58px;
+}
+
+.comment-box{
+    padding: 10px;
+    overflow: hidden;
+}
+
+.comment-box .user{
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+
+/* #### General Div Elements #### */
+html {
+    font-size: 13px;
+} body {
+    font-family: "Whitney Book",Lato,"Segoe UI","Source Sans Pro","Times New Roman";
+    line-height: 1.6;
+} b, strong {
+    font-weight: bolder;
+    font-family: "Whitney";
+} header, .context-menu, .megamenu-content, footer {
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+/* #### Headers #### */
+h1, h2, h3, h4, h5, h6 {
+    grid-column: 1 / span 2;
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+    text-align: center;
+} h1 {
+    font-weight: bold;
+    padding-bottom: .3em;
+    font-size: 2.25em;
+    line-height: 1.2;
+} h2 {
+    padding-bottom: .3em;
+    font-size: 1.846em;
+    line-height: 1.225;
+    text-align: left;
+} h3 {
+    font-weight: normal;
+    font-style: italic;
+    font-size: 1.538em;
+    line-height: 1.43;
+} h4 {
+    font-weight: normal;
+    text-decoration: underline;
+    font-size: 1.25em;
+} h5 {
+    font-weight: normal;
+    font-style: italic;
+    text-decoration: underline;
+    font-size: 1.15em;
+    text-align: left;
+} h6 {
+    font-weight: normal;
+    font-size: 1.15em;
+}

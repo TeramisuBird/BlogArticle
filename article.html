@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="article.css">
+  <title>Blog :: Article</title>
+</head>
+<body>
+	<div class="container">
+		<ul>
+			<li><a th:href="@{/login}">Login</a></li>
+			<li><a th:href="@{/register}">Register</a></li>
+		</ul>
+	</div>
+	<div class="container">
+		<hr />
+		<h1>2.1 Billion Net Decline in Bird Species</h1>
+		<p>A startling discovery in ecological health which may spell bad news for all animals across North America. A review of a scientific paper.</p>
+		<p>By Joseph Blethen</p>
+		<p>February 12th, 2024</p>
+	</div>
+	<div class="article-image"><img src="image_185507.png" alt="image"></div>
+	<div class="article-subtitle"><p>Scientific study using the NEXRAD US radar network shows decline in Avian biomass among most birds, especially American Sparrows and Wood Warblers.  There was somewhat an increase in Raptors and Waterfowl on the west coast of the United States.</p>
+	</div>
+	<div>
+		<p>There is a slow crawl towards extinction of many bird species across North America. Over the past 48 years, bird populations across North America have declined, with a loss size of about 3 billion birds since the 1970s.</p>
+		<p>The primary aim of this study was to measure the health of the environment across the United States and Canada by monitoring bird populations.  It was predicted that there would be a decline, but this prediction and hypothesis was not made apparent in the study.</p>
+		<p>By using the NEXRAD US radar network, this study collected avian biomass data for 1 decade between 143 weather radar stations.  Furthermore, the population change was also tracked among 529 different bird species which was referenced against nearly 50 years of bird population data.  Where the 50 years of tracked bird data lacked coverage, the NEXRAD network was able to make up for in biomass estimates of migratory bird species.  Because there were two differing independent population monitoring methods, the error of population observation was minimized.</p>
+		<p>The main results show a net loss of about 2.9 billion breeding bird species since the 1970s with an accuracy rating of 95%, the biggest decline being from grassland-original bird species.  The largest loss of bird species is located in the eastern US near Washington DC and the central US between Iowa, Missouri, and Illinois.  There was an increase in bird population around the west coast of the US in northern California, Oregon, and Washington state.  Among all the birds lost, the largest proportion were American Sparrows, but the largest change since the 1970s were Old World Sparrows and Larks.  Meanwhile, the highest population increase was from vireos, ducks, geese, and other waterfowl.</p>
+		<p>In order to explain why waterfowl populations have increased when all else has declined, the study refers to the targeted conservation efforts including billions of dollars in wetland restoration and conservation.  Considering the sharp decline of grassland habitat compared to all others, the study strongly suggests that a similar effort should be concentrated towards expanding grasslands specifically.  It claims that the reason why grassland bird populations are declining faster than in any other habitat is because of habitat loss and pesticides used in both breeding and non-breeding zones of migratory birds.  This is explained by similar habitat losses of birds in Europe.</p>
+		<p>The biggest problem that I see with this study is that it was not explained how exactly the biomass data was correlated to the exact bird species in the study aside from just knowing that the birds generally took that migratory path.  Also, this study only looked at migratory birds, most of which were breeding-season birds.  Furthermore, the locations in the US with the highest decline of bird populations were in places of the highest number of NEXRAD sites, showing that there are gaps in observation across the Western United States where population increases were seen.  Lastly, Canadian bird populations  were mentioned in the beginning of this study but were never shown in the data.</p>
+		<p>Overall, the aim of this study was to show the problem of bird population decline and the deterioration of the environment's health over the past 50 years.  From the findings presented, this conclusion is made evident as there has been a staggering loss of biodiversity, especially among Sparrow populations.  The study implicitly set out to find the status of success in conservation investment efforts, and it found that exact success through the waterfowl populations in US wetlands.  Ultimately, the staggering decline of birds throughout US grasslands shows that much more conservation attention should be placed in those biomes, and that with enough effort, the positive results seen in wetlands may be replicated elsewhere.</p>
+		<h5>Additional images</h5>
+		<div class="article-image"><img src="image_185551.png" alt="image"></div>
+		<div class="article-image"><img src="image_185636.png" alt="image"></div>
+	</div>
+	<div>
+		<h3>APA 7 Citation:</h3>
+		<p>Rosenberg, K. V., Dokter, A. M., Blancher, P. J., Sauer, J. R., Smith, A. C., Smith, P. A., Stanton, J. C., Panjabi, A., Helft, L., Parr, M., & Marra, P. P. (2019). Decline of the North American avifauna. Science, 366(6461), 120–124. https://doi.org/10.1126/science.aaw1313 </p>
+		<h3>Comments</h3>
+	</div>
+	<div class="comment-section">
+		<div class="post-comment">
+			<div class="posts-container">
+				<div class="post" th:each="post : ${posts}">
+					<h6><a th:href="@{'/posts/' + ${post.id}}"
+						th:text="${post.title}">Title</a>
+					</h6>
+					<div class="comment-post">
+						<p th:text="${post.body}">body text</p>
+						<br/>
+					</div>
+					<div class="user">
+						<div class=name th:text="'By ' + ${post.account.firstName}">Account First Name</div>
+						<div class=day th:text="'Created on ' + ${post.createdAt}">Created on</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="comment-box">
+		<h4><a th:href="@{/posts/new}">Make new Comment</a></h4>
+	</div>
+</body>
+</html>
